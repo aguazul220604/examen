@@ -1,0 +1,19 @@
+header {
+  background-color: rgb(46, 57, 112);
+  padding: 40px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 0 20px;
+  font-size: 30px;
+}
+
+nav a:hover {
+  background-color: rgb(195, 208, 250);
+  color: rgb(46, 57, 112);
+  border-radius: 20px;
+  padding: 20px;
+}

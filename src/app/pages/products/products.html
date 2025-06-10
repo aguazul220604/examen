@@ -1,0 +1,8 @@
+<p>Los mejores productos</p>
+
+<div *ngFor="let producto of productos">
+  <h2>{{ producto.name }}</h2>
+  <img [src]="producto.image" [alt]="producto.name" />
+  <p>Precio: {{ producto.price }}</p>
+  <p>{{ producto.description }}</p>
+</div>
