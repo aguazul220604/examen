@@ -1,3 +1,56 @@
-<p>La mejor calidad</p>
-<p>Tenemos el catálogo más completo de tenis</p>
-<img src="/img/img1.jpg" alt="Producto 1" />
+<div>
+  <div class="galeria">
+    <h3>Tenemos la mejor ropa deportiva</h3>
+    <h2>para que des el máximo en tus entrenamientos</h2>
+    <h1>Solo, en... VIRTUS</h1>
+    <div class="galeria-images">
+      <img src="/img/virtus2.jpg" alt="Virtus 1" />
+      <img src="/img/virtus1.jpg" alt="Virtus 2" />
+      <img src="/img/virtus3.jpg" alt="Virtus 3" />
+    </div>
+  </div>
+
+  <h3>Tenemos todo lo que necesitas... y un poco más</h3>
+
+  <div class="marcas">
+    <div class="marca">
+      <img src="/img/marca1.png" alt="Marca 1" />
+      <button (click)="mostrarProductos(1)">Más</button>
+      <ul *ngIf="productosVisibles[1]">
+        <li>Joggers</li>
+        <li>Camisas</li>
+        <li>Sudaderas</li>
+      </ul>
+    </div>
+
+    <div class="marca">
+      <img src="/img/marca2.png" alt="Marca 2" />
+      <button (click)="mostrarProductos(2)">Más</button>
+      <ul *ngIf="productosVisibles[2]">
+        <li>Sudaderas</li>
+        <li>Shorts</li>
+        <li>T-shirts</li>
+      </ul>
+    </div>
+
+    <div class="marca">
+      <img src="/img/marca3.jpg" alt="Marca 3" />
+      <button (click)="mostrarProductos(3)">Más</button>
+      <ul *ngIf="productosVisibles[3]">
+        <li>Calcetas</li>
+        <li>Air Force One</li>
+        <li>Shorts</li>
+      </ul>
+    </div>
+
+    <div class="marca">
+      <img src="/img/marca4.jpeg" alt="Marca 4" />
+      <button (click)="mostrarProductos(4)">Más</button>
+      <ul *ngIf="productosVisibles[4]">
+        <li>Proteína</li>
+        <li>Creatina</li>
+        <li>Pre entreno</li>
+      </ul>
+    </div>
+  </div>
+</div>

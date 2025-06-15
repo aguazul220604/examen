@@ -18,7 +18,7 @@ export class Products {
       name: 'Product 1',
       price: 100,
       description: 'Description for Product 1',
-      image: '/img/img3.jpeg',
+      image: '/img/img2.jpeg',
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export class Products {
       name: 'Product 3',
       price: 300,
       description: 'Description for Product 3',
-      image: '/img/img3.jpeg',
+      image: '/img/img4.jpeg',
     },
   ];
 

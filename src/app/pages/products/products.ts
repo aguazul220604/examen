@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
-  standalone: true, // Asegúrate de tener esto si es componente standalone
-  imports: [CommonModule], // Importa CommonModule para usar *ngFor, *ngIf, etc.
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './products.html',
   styleUrl: './products.css',
 })
