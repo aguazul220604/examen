@@ -1,8 +1,16 @@
-<p>Los mejores productos</p>
+<h1>Arma outfits perrones</h1>
 
-<div *ngFor="let producto of productos">
-  <h2>{{ producto.name }}</h2>
-  <img [src]="producto.image" [alt]="producto.name" />
-  <p>Precio: {{ producto.price }}</p>
-  <p>{{ producto.description }}</p>
+<div *ngFor="let cat of productosPorCategoria | keyvalue" class="categoria">
+  <h2>{{ categoryNames[cat.key] || 'Categoría ' + cat.key }}</h2>
+
+  <div class="productos-grid">
+    <div *ngFor="let producto of cat.value" class="producto">
+      <img [src]="producto.image" [alt]="producto.name" />
+      <div>
+        <h3>{{ producto.name }}</h3>
+        <p>Precio: ${{ producto.price }}</p>
+        <p>{{ producto.description }}</p>
+      </div>
+    </div>
+  </div>
 </div>

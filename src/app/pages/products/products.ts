@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '../../services/products';
-import { Products } from '../../services/products';
+import { Product, Products } from '../../services/products';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,8 +10,21 @@ import { CommonModule } from '@angular/common';
   styleUrl: './products.css',
 })
 export class Productos {
-  productos: Product[] = [];
-  constructor(private product: Products) {
-    this.productos = this.product.getProducts();
+  productosPorCategoria: { [cat: number]: Product[] } = {};
+
+  categoryNames: { [key: string]: string } = {
+    '1': 'Gymshark',
+    '2': 'Youngla',
+    '3': 'Nike',
+  };
+
+  constructor(private productService: Products) {
+    const productos = this.productService.getProducts();
+    productos.forEach((prod) => {
+      if (!this.productosPorCategoria[prod.cat]) {
+        this.productosPorCategoria[prod.cat] = [];
+      }
+      this.productosPorCategoria[prod.cat].push(prod);
+    });
   }
 }
