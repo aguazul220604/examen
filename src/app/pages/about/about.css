@@ -4,18 +4,37 @@ h1 {
   letter-spacing: 10px;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-  width: 50%;
-  height: auto;
-}
-
-p {
-  font-size: large;
+h3,
+h2,
+h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
-  color: darkblue;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px;
+}
+
+p,
+ul,
+li {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+div {
+  background-color: rgb(27, 27, 27);
+}
+
+img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+}
+
+.mapa {
+  text-align: center;
 }
