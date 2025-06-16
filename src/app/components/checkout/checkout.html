@@ -1,0 +1,22 @@
+<div class="pagar_div">
+  <h2>Resumen del carrito</h2>
+
+  <div *ngIf="carrito.length > 0; else vacio">
+    <div *ngFor="let producto of carrito; let i = index" class="producto">
+      <img [src]="producto.image" [alt]="producto.name" />
+      <div>
+        <h3>{{ producto.name }}</h3>
+        <p>Precio: ${{ producto.price }}</p>
+        <p>{{ producto.description }}</p>
+        <button (click)="eliminarProducto(i)">Eliminar</button>
+      </div>
+    </div>
+
+    <h3 class="pagar_info">Total: ${{ calcularTotal() }}</h3>
+    <button (click)="finalizarPago()" class="pagar">Pagar</button>
+  </div>
+
+  <ng-template #vacio>
+    <p class="pagar_info">No hay productos en el carrito.</p>
+  </ng-template>
+</div>

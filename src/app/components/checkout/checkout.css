@@ -1,0 +1,118 @@
+.pagar_div {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor principal */
+:host {
+  display: block;
+  padding: 2rem;
+  background-color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título principal */
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.pagar {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px;
+}
+
+/* Producto individual */
+.producto {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+/* Imagen del producto */
+.producto img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Info del producto */
+.producto div {
+  flex: 1;
+}
+
+.producto h3 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+}
+
+.producto p {
+  margin: 4px 0;
+}
+
+/* Botón eliminar */
+.producto button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #c0392b;
+}
+
+/* Total */
+h3 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+/* Botón pagar */
+button.pagar,
+button.finalizar_compra {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button.pagar:hover,
+button.finalizar_compra:hover {
+  background-color: #219150;
+}
+
+/* Texto si no hay productos */
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+.pagar_info {
+  color: white;
+}

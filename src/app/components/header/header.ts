@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CartService } from '../../services/cart';
 import { Product } from '../../services/products'; // Ajusta la ruta si es diferente
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -15,7 +15,7 @@ export class Header {
   carrito: Product[] = [];
   mostrarCarrito: boolean = false;
 
-  constructor(private cartService: CartService) {
+  constructor(private router: Router, private cartService: CartService) {
     this.cartService.carrito$.subscribe((productos) => {
       this.carrito = productos;
     });
@@ -34,6 +34,6 @@ export class Header {
   }
 
   irACheckout() {
-    console.log('Finalizar compra:', this.carrito);
+    this.router.navigate(['/checkout']);
   }
 }
