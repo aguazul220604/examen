@@ -98,3 +98,13 @@ div {
   border-radius: 5px;
   margin: 3px 0;
 }
+
+.brand {
+  font-family: "UnifrakturCook", cursive;
+  color: white;
+  font-size: 200px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+  letter-spacing: 1px;
+}

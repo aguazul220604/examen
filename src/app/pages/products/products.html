@@ -1,15 +1,42 @@
 <h1>Arma outfits perrones</h1>
 
+<!-- Modal que aparece cuando mostrarModal es true -->
+<div class="modal" *ngIf="mostrarModal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close" (click)="closeModal()">&times;</span>
+
+    <div class="modal-body">
+      <img
+        [src]="productoSeleccionado?.image"
+        [alt]="productoSeleccionado?.name"
+        class="modal-img"
+      />
+      <div class="modal-info">
+        <h3 class="modal_info">{{ productoSeleccionado?.name }}</h3>
+        <p class="modal_info">Precio: ${{ productoSeleccionado?.price }}</p>
+        <p class="modal_info">{{ productoSeleccionado?.description }}</p>
+        <br />
+        <button
+          (click)="agregarAlCarrito(productoSeleccionado)"
+          class="agregar_carrito"
+        >
+          Agregar al carrito
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div *ngFor="let cat of productosPorCategoria | keyvalue" class="categoria">
-  <h2>{{ categoryNames[cat.key] || 'Categoría ' + cat.key }}</h2>
+  <h2 class="marca">{{ categoryNames[cat.key] || 'Categoría ' + cat.key }}</h2>
 
   <div class="productos-grid">
     <div *ngFor="let producto of cat.value" class="producto">
       <img [src]="producto.image" [alt]="producto.name" />
       <div>
-        <h3>{{ producto.name }}</h3>
-        <p>Precio: ${{ producto.price }}</p>
-        <p>{{ producto.description }}</p>
+        <button (click)="openModal(producto)" class="button_modal_open">
+          Ver más
+        </button>
       </div>
     </div>
   </div>

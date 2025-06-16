@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NgIf } from '@angular/common'; // importa el NgIf
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
   styleUrls: ['./home.css'],
-  imports: [NgIf], // agrega NgIf a los imports del componente
+  imports: [NgIf],
 })
 export class Home {
   productosVisibles: { [key: number]: boolean } = {};

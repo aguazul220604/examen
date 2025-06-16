@@ -1,6 +1,6 @@
 header {
   background-color: rgb(63, 63, 63);
-  padding: 40px;
+  padding: 50px;
 }
 
 nav {
@@ -11,10 +11,11 @@ nav {
 
 nav a {
   color: white;
+  font-family: "UnifrakturMaguntia";
   text-decoration: none;
   margin: 0 10px;
   padding: 0 20px;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 nav a:hover {
@@ -27,4 +28,77 @@ nav a:hover {
 .logo {
   width: 200px;
   height: 90px;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.contador {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 14px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.finalizar_compra {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px;
+}
+
+.carrito {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.eliminar {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px;
 }

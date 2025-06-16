@@ -1,3 +1,4 @@
+<!-- HEADER -->
 <header>
   <nav>
     <img src="/img/virtus_logo.jpg" alt="" class="logo" />
@@ -5,5 +6,45 @@
     <a routerLink="/nosotros">Nosotros</a>
     <a routerLink="/productos">Productos</a>
     <a routerLink="/contacto">Contacto</a>
+
+    <!-- Icono del carrito -->
+    <div class="carrito-icon" (click)="toggleCarritoModal()">
+      <i
+        class="fa-solid fa-cart-shopping"
+        style="color: white; font-size: 40px"
+      ></i>
+      >
+    </div>
   </nav>
 </header>
+
+<div class="modal" *ngIf="mostrarCarrito" (click)="toggleCarritoModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close" (click)="toggleCarritoModal()">&times;</span>
+    <h3>Carrito de compras</h3>
+
+    <ul *ngIf="carrito.length > 0; else vacio">
+      <li *ngFor="let prod of carrito; let i = index">
+        <img [src]="prod.image" width="40" />
+        {{ prod.name }} - ${{ prod.price }}
+        <br />
+        <button (click)="eliminarDelCarrito(i)" class="eliminar">
+          Eliminar
+        </button>
+      </li>
+    </ul>
+
+    <ng-template #vacio>
+      <p>Tu carrito está vacío.</p>
+    </ng-template>
+
+    <p *ngIf="carrito.length > 0">Total: ${{ calcularTotal() }}</p>
+    <button
+      *ngIf="carrito.length > 0"
+      (click)="irACheckout()"
+      class="finalizar_compra"
+    >
+      Finalizar compra
+    </button>
+  </div>
+</div>
